@@ -2,25 +2,24 @@
 <html>
 <head>
     <title>Anthony's Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="./pics/tao.png" type="image/x-icon">
 </head>
 <body>
 
 <script>
-    // Define variables for email and LinkedIn URL
-    var email = "anthony.porporino21@gmail.com";
-    var linkedinURL = "https://www.linkedin.com/in/anthony-porporino";
+
 </script>
 
 <header>
     <h1>Anthony Porporino's Website</h1>
     <nav>
         <ul>
-            <li><a href="CV.pdf">CV</a></li>
+            <li><a href="./files/CV.pdf" target="_blank">CV</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="teaching.html">Teaching</a></li>
             <li><a href="writing.html">Writing</a></li>
-            <li><a href="art.html">Art/Music</a></li>
+            <li><a href="music.html">Music</a></li>
         </ul>
     </nav>
 </header>
@@ -40,11 +39,16 @@
     <p>To contact me for any reason, you can send me an <a href="mailto:" id="emailLink">email</a> or connect with me on <a href="#" id="linkedinLink">LinkedIn</a>.</p>
 </div>
 <script>
+    // Define variables for email and LinkedIn URL
+    var email = "anthony.porporino21@gmail.com";
+    var linkedinURL = "https://www.linkedin.com/in/anthony-porporino";
+
     // Set the email and LinkedIn links using the variables
     document.getElementById("emailLink").href += email;
     document.getElementById("linkedinLink").addEventListener("click", function () {
         window.open(linkedinURL, '_blank');
     });
+    
 </script>
 
 </body>

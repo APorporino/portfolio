@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Anthony's Website</title>
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="icon" href="./pics/tao.png" type="image/x-icon">
+        <style>
+            /* Basic styling */ 
+            .list-container {
+                cursor: pointer;
+                display: flex;
+            }
+    
+            .arrow {
+                margin-right: 8px;
+                display: inline-block; 
+                transition: transform 0.3s;
+            }
+    
+            .arrow.down {
+                transform: rotate(90deg);
+            }
+    
+            .nested-list {
+                display: none;
+                margin-left: 20px; /* Indentation for sub-lists */
+            }
+    
+            .nested-list.visible {
+                display: block;
+            }
+
+            ul {
+                list-style-type: none;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Projects</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+        <hr>
+
+        <ul>
+            <li>
+                <!-- If I want more nesting, just add that list-contatiner div and then another list (ul) -->
+                <div class="list-container" onclick="toggleNestedList(this)">
+                    <h1><span class="arrow">▶</span>Personal Projects</h1>
+                </div>
+
+                <ul class="nested-list">
+                    <li>
+                        <div class="box secondary-color">
+
+                            <div class="list-container" onclick="toggleNestedList(this)">
+                                <h3><span class="arrow">▶</span>What To Do</h3>
+                            </div>
+                            <div class="nested-list">
+                                <p>Description: What To Do is a task manager web application for software projects</p>
+                                <p>Technology: MERN - MongoDB, Express.js, node.js, React.js</p>
+                                <p><a target="_blank" href="https://www.youtube.com/watch?v=A8CKesvGjRc&ab_channel=APorporino-Projects">Demo</a></p>
+                                <p><a target="_blank" href="https://github.com/APorporino/WhatToDo">Code</a></p>
+                            </div>
+                        
+                        </div>
+                        
+                    </li>
+                    <li>
+                        <div class="box secondary-color">
+
+                            <div class="list-container" onclick="toggleNestedList(this)">
+                                <h3><span class="arrow">▶</span>Who Won</h3>
+                            </div>
+                            <div class="nested-list">
+                                <p>Description: A web based sports trivia game</p>
+                                <p>Technology: MERN - MongoDB, Express.js, node.js, React.js</p>
+                                <!-- <p><a target="_blank" href="">Demo</a></p> -->
+                                <p><a target="_blank" href="https://github.com/APorporino/Who-Won-backend">Code</a></p>
+                            </div>
+                        
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="list-container" onclick="toggleNestedList(this)">
+                    <h1><span class="arrow">▶</span>School Projects</h1>
+                </div>
+
+                <ul class="nested-list">
+                    <li>
+                        <div class="box secondary-color">
+
+                            <div class="list-container" onclick="toggleNestedList(this)">
+                                <h3><span class="arrow">▶</span>Brick Breaker</h3>
+                            </div>
+                            <div class="nested-list">
+                                <p>Description: A Java remake of the famous blackberry game</p>
+                                <p>Technology: Java, JavaSwing, UI</p>
+                                <!-- <p><a target="_blank" href="">Demo</a></p> -->
+                                <p><a target="_blank" href="https://github.com/APorporino/ECSE-223-BrickBreaker">Code</a></p>
+                            </div>
+                        
+                        </div>
+                        
+                    </li>
+                    <li>
+                        <div class="box secondary-color">
+
+                            <div class="list-container" onclick="toggleNestedList(this)">
+                                <h3><span class="arrow">▶</span>Online Tutoring System</h3>
+                            </div>
+                            <div class="nested-list">
+                                <p>Description: A web based tutoring system built using JavaSpring and Vue.js</p>
+                                <p>Technology: Java, JavaSwing, UI</p>
+                                <!-- <p><a target="_blank" href="">Demo</a></p> -->
+                                <p><a target="_blank" href="https://github.com/APorporino/ECSE-321-TutoringSystem">Code</a></p>
+                            </div>
+                        
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+
+        <script>
+            function toggleNestedList(element) {
+                // Find the associated nested list
+                const nestedList = element.nextElementSibling;
+    
+                // Toggle visibility
+                if (nestedList) {
+                    nestedList.classList.toggle("visible");
+    
+                    // Toggle the arrow direction
+                    const arrow = element.querySelector(".arrow");
+                    arrow.classList.toggle("down");
+                }
+            }
+        </script>
+    </body>
+
+</html>
