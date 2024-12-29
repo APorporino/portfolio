@@ -14,6 +14,20 @@ header {
     text-align: center;
 } */
 
+/* 
+https://www.youtube.com/watch?v=Qf-wVa9y9V4&ab_channel=WebDevSimplified 
+DISAPLY property is very important. It determines how an item is positioned.
+default display is block (for divs) which makes an element take up a whole line no matter what. 
+default for spans is inline (which is the minimum amount possible).
+inline-block lets you see the minimum amount possible
+none makes that element dissapear
+
+flex is complex
+- justify content organizes along main axis
+- align items along cross axis
+grid is 
+} */
+
 header nav ul li {
     display: inline-block;
     margin-right: 20px; /* Adjust spacing between menu items */
@@ -21,8 +35,8 @@ header nav ul li {
 
 body {
     font-size: x-large;
-    /* margin: 0px; */
-    margin: 2%;
+    /* NOTE: CSS has a default margin */
+    margin: 2% 20% 2% 20%;
     background-color: rgb(255, 255, 255);
     font-family:monospace;
     line-height: 2;
@@ -31,14 +45,58 @@ body {
 }
 
 .box {
-    border: .2vh solid black;
+    border: .1vh solid black;
     padding: 0% 2% 0% 2%;
-    margin: 3%;
-    background-color: rgb(215, 241, 255);
+    margin: 2% 10% 2% 10%;
+    /* background-color: rgb(215, 241, 255); */
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.box-project {
+    width: 25vw;
+    height: 25vh;
+    overflow: auto;
+    border: .2vh solid black;
+    padding: 0% 2% 0%;
+    margin: 1% 0% 1% 0%;
+    /* background-color: rgb(215, 241, 255); */
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    font-size: medium;
+}
+
+.projects-flexbox {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 /* .secondary-color {
     background-color: rgb(237, 237, 237);
 } */
 
+.git-pic {
+    width: 20vh;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid black;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.profile-pic {
+    width: 20vh;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid black;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.title-pic {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.test {
+    background-color: aliceblue;
+}
