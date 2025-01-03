@@ -75,20 +75,18 @@ body {
     background-color: rgb(237, 237, 237);
 } */
 
-.git-pic {
-    width: 20vh;
-    height: auto;
-    border-radius: 50%;
-    border: 2px solid black;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
-}
-
 .profile-pic {
     width: 15vw;
     height: auto;
     border-radius: 50%;
     border: 2px solid black;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.icon-pic {
+    width: 5vw;
+    height: auto;
+    border-radius: 50%;
 }
 
 .title-pic {
